@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.2 on darwin)" generated="20230707 09:12:36.462" rpa="false" schemaversion="4">
+<suite id="s1" name="Poc" source="/Users/ccooper/code/rf/poc.robot">
+<test id="s1-t1" name="Login Example" line="20">
+<kw name="Login to RHSM Web" library="keywords">
+<arg>manifests-admin-1</arg>
+<arg>shadowman</arg>
+<arg>${stage-home}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230707 09:12:36.594" level="INFO">Opening browser 'Chrome' to base url 'https://access.stage.redhat.com/management'.</msg>
+<status status="PASS" starttime="20230707 09:12:36.594" endtime="20230707 09:12:46.904"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:username-verification</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230707 09:12:46.905" endtime="20230707 09:12:46.929"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username-verification</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230707 09:12:46.929" level="INFO">Typing text 'manifests-admin-1' into text field 'id:username-verification'.</msg>
+<status status="PASS" starttime="20230707 09:12:46.929" endtime="20230707 09:12:47.035"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:login-show-step2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230707 09:12:47.035" level="INFO">Clicking element 'id:login-show-step2'.</msg>
+<status status="PASS" starttime="20230707 09:12:47.035" endtime="20230707 09:12:47.070"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:password</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230707 09:12:47.070" endtime="20230707 09:12:47.295"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230707 09:12:47.295" level="INFO">Typing text 'shadowman' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20230707 09:12:47.295" endtime="20230707 09:12:47.349"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:rh-password-verification-submit-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230707 09:12:47.349" level="INFO">Clicking element 'id:rh-password-verification-submit-button'.</msg>
+<status status="PASS" starttime="20230707 09:12:47.349" endtime="20230707 09:12:51.461"/>
+</kw>
+<status status="PASS" starttime="20230707 09:12:36.594" endtime="20230707 09:12:51.461"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230707 09:12:51.461" endtime="20230707 09:12:51.547"/>
+</kw>
+<tag>foo</tag>
+<status status="PASS" starttime="20230707 09:12:36.593" endtime="20230707 09:12:51.547"/>
+</test>
+<test id="s1-t2" name="Subscription Details Example" line="25">
+<kw name="Login to RHSM Web" library="keywords">
+<arg>manifests-admin-1</arg>
+<arg>shadowman</arg>
+<arg>${stage-subs}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230707 09:12:51.548" level="INFO">Opening browser 'Chrome' to base url 'https://access.stage.redhat.com/management/subscriptions?type=all'.</msg>
+<status status="PASS" starttime="20230707 09:12:51.548" endtime="20230707 09:12:55.345"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:username-verification</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230707 09:12:55.346" endtime="20230707 09:12:55.361"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username-verification</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230707 09:12:55.362" level="INFO">Typing text 'manifests-admin-1' into text field 'id:username-verification'.</msg>
+<status status="PASS" starttime="20230707 09:12:55.361" endtime="20230707 09:12:55.448"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:login-show-step2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230707 09:12:55.448" level="INFO">Clicking element 'id:login-show-step2'.</msg>
+<status status="PASS" starttime="20230707 09:12:55.448" endtime="20230707 09:12:55.483"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:password</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230707 09:12:55.483" endtime="20230707 09:12:55.717"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230707 09:12:55.717" level="INFO">Typing text 'shadowman' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20230707 09:12:55.717" endtime="20230707 09:12:55.765"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:rh-password-verification-submit-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230707 09:12:55.765" level="INFO">Clicking element 'id:rh-password-verification-submit-button'.</msg>
+<status status="PASS" starttime="20230707 09:12:55.765" endtime="20230707 09:12:57.086"/>
+</kw>
+<status status="PASS" starttime="20230707 09:12:51.548" endtime="20230707 09:12:57.086"/>
+</kw>
+<kw name="Check Sub Details" library="keywords">
+<tag>foo</tag>
+<tag>subscriptions</tag>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="subscriptions_inventory_table"]/tbody/tr[1]/td[1]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230707 09:12:57.086" endtime="20230707 09:13:01.033"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//*[@id="subscriptions_inventory_table"]/tbody/tr[1]/td[1]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230707 09:13:01.034" level="INFO">Clicking link 'xpath=//*[@id="subscriptions_inventory_table"]/tbody/tr[1]/td[1]/a'.</msg>
+<status status="PASS" starttime="20230707 09:13:01.034" endtime="20230707 09:13:02.303"/>
+</kw>
+<status status="PASS" starttime="20230707 09:12:57.086" endtime="20230707 09:13:02.303"/>
+</kw>
+<tag>subscriptions</tag>
+<status status="PASS" starttime="20230707 09:12:51.547" endtime="20230707 09:13:02.303"/>
+</test>
+<doc>POC for Robot Framework
+
+Keywords are imported from the resource file</doc>
+<status status="PASS" starttime="20230707 09:12:36.463" endtime="20230707 09:13:02.304"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">foo</stat>
+<stat pass="1" fail="0" skip="0">subscriptions</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Poc">Poc</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
